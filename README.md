@@ -1,7 +1,7 @@
 # bitcoin-bosh-release
 # BOSH release for bitcoin
 
-This is a a bosh release for a [full bitcoin node](https://bitcoin.org/en/full-node).
+This is a bosh release for a [full bitcoin node](https://bitcoin.org/en/full-node).
 
 ### Upload the BOSH releases
 
