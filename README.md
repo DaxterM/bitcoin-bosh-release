@@ -9,7 +9,9 @@ To use this BOSH release first upload it to your BOSH:
 
 ```
 bosh target BOSH_HOST
-bosh upload release https://github.com/DaxterM/bitcoin-bosh-release/releases/download/1.0.0/bitcoin-bosh-release-1.tgz
+git clone https://github.com/DaxterM/bitcoin-bosh-release
+cd bitcoin-bosh-release
+bosh upload release releases/bitcoin-bosh-release/bitcoin-bosh-release-1.yml
 ```
 
 
@@ -44,7 +46,7 @@ instance_groups:
   networks:
       - name: default
         default: [dns, gateway]
-      - name: vip #Optional if you want to use Elastic IP
+      - name: vip 
         static_ips: [Your.ELB.IP.HERE]
   jobs:
   - name: bitcoin
