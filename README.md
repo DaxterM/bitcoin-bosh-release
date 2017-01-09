@@ -44,8 +44,8 @@ instance_groups:
   networks:
       - name: default
         default: [dns, gateway]
-      #- name: vip #Optional if you want to use Elastic IP
-      #  static_ips: [Your.ELB.IP.HERE] #Optional if you want to use Elastic IP
+      - name: vip #Optional if you want to use Elastic IP
+        static_ips: [Your.ELB.IP.HERE]
   jobs:
   - name: bitcoin
     release: bitcoin-bosh-release
