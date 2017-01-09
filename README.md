@@ -1,11 +1,11 @@
 # bitcoin-bosh-release
 # BOSH release for bitcoin
 
-This is a a bosh release for a full bitcoin node.
+This is a a bosh release for a [full bitcoin node](https://bitcoin.org/en/full-node).
 
 ### Upload the BOSH releases
 
-To use this BOSH release first upload it to your BOSH:
+To use this BOSH release first upload it to your BOSH Director:
 
 ```
 bosh target BOSH_HOST
@@ -46,7 +46,7 @@ instance_groups:
   networks:
       - name: default
         default: [dns, gateway]
-      - name: vip 
+      - name: vip
         static_ips: [Your.ELB.IP.HERE]
   jobs:
   - name: bitcoin
