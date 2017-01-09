@@ -1,0 +1,7 @@
+---
+name: bitcoin
+
+dependencies:
+
+files:
+  - bitcoin/bitcoin-0.13.2-x86_64-linux-gnu.tar.gz # https://bitcoin.org/bin/bitcoin-core-0.13.2/bitcoin-0.13.2-x86_64-linux-gnu.tar.gz

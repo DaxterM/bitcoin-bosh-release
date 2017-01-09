@@ -1,0 +1,10 @@
+---
+name: bitcoin
+templates:
+  ctl.sh: bin/ctl
+packages:
+- bitcoin
+properties:
+   maxconnections:
+     description: Maintain at most <n> connections to peers
+     default: 125

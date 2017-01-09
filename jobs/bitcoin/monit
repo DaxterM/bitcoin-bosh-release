@@ -1,0 +1,5 @@
+check process bitcoin
+  with pidfile /var/vcap/sys/run/bitcoin/bitcoin.pid
+  start program "/var/vcap/jobs/bitcoin/bin/ctl start"
+  stop program "/var/vcap/jobs/bitcoin/bin/ctl stop"
+  group vcap

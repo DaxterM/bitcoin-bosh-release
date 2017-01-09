@@ -1,0 +1,16 @@
+---
+packages:
+- name: bitcoin
+  version: 489b0646a654f28305856c29a81cdb8f785038b9
+  fingerprint: 489b0646a654f28305856c29a81cdb8f785038b9
+  sha1: b7b46bf04944b93b345ec229c3b4d70a7a3c4795
+  dependencies: []
+jobs:
+- name: bitcoin
+  version: b8cc891028709e2149e6b3193096ab48cfa5c6be
+  fingerprint: b8cc891028709e2149e6b3193096ab48cfa5c6be
+  sha1: 9901906e09fe138b973dbabbb4bb465e8904260e
+commit_hash: b473edd0
+uncommitted_changes: true
+name: bitcoin-bosh-release
+version: '1'
