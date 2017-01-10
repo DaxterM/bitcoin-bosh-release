@@ -7,6 +7,8 @@ This is a bosh release for a [full bitcoin node](https://bitcoin.org/en/full-nod
 
 To use this BOSH release first upload it to your BOSH Director:
 
+(If you need to setup a bosh director on AWS see https://github.com/DaxterM/bosh-init-aws)
+
 ```
 bosh target BOSH_HOST
 git clone https://github.com/DaxterM/bitcoin-bosh-release
@@ -36,13 +38,13 @@ stemcells:
 instance_groups:
 - name: Bitcoin
   instances: 1
-  vm_type: large
+  vm_type: small
 
 
   stemcell: trusty
   azs: [us-east-1a]
 
-  persistent_disk_type: large
+  persistent_disk_type: xlarge
   networks:
       - name: default
         default: [dns, gateway]
@@ -70,7 +72,7 @@ azs:
 vm_types:
 - name: small
   cloud_properties:
-    instance_type: t2.micro
+    instance_type: t2.small
     ephemeral_disk: {size: 3000, type: gp2}
     auto_assign_public_ip: True
 - name: large
@@ -89,6 +91,9 @@ disk_types:
 - name: large
   disk_size: 50_000
   cloud_properties: {type: gp2}
+- name: xlarge
+  disk_size: 150_000
+  cloud_properties: {type: gp2}  
 
 networks:
 - name: default
