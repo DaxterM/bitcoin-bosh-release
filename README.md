@@ -13,7 +13,7 @@ To use this BOSH release first upload it to your BOSH Director:
 bosh target BOSH_HOST
 git clone https://github.com/DaxterM/bitcoin-bosh-release
 cd bitcoin-bosh-release
-bosh upload release releases/bitcoin-bosh-release/bitcoin-bosh-release-1.yml
+bosh upload release releases/bitcoin-bosh-release/bitcoin-bosh-release-2.yml
 ```
 
 
