@@ -14,7 +14,7 @@ case $1 in
     chown -R vcap:vcap $LOG_DIR
     chown -R vcap:vcap $DATA_DIR
 
-    exec /var/vcap/packages/bitcoin/bitcoin-0.13.2/bin/bitcoind -printtoconsole -datadir=$DATA_DIR -pid=$PIDFILE -maxconnections=<%= properties.maxconnections %> -daemon >>  $LOG_DIR/bitcoin.stdout.log \
+    exec chpst -u vcap:vcap /var/vcap/packages/bitcoin/bitcoin-0.13.2/bin/bitcoind -printtoconsole -datadir=$DATA_DIR -pid=$PIDFILE -maxconnections=<%= properties.maxconnections %> -daemon >>  $LOG_DIR/bitcoin.stdout.log \
       2>> $LOG_DIR/bitcoin.stderr.log
 
     ;;
